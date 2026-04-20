@@ -29,6 +29,14 @@ st.sidebar.header("💧 Hydraulic Settings")
 eff = st.sidebar.slider("Pump efficiency (%)", 50, 90, 70) / 100
 zone_flow_limit = st.sidebar.number_input("Max zone flow (L/s)", value=5.0)
 
+# ========================= COST INPUTS =========================
+st.sidebar.header(" 💰 Cost Inputs")
+pe_cost_per_m = st.sidebar.number_input("PE Pipe Cost ($/m)", value=1.5)
+pvc_cost_per_m = st.sidebar.number_input("PVC Pipe Cost ($/m)", value=3.0)
+valve_cost = st.sidebar.number_input("Valve Cost ($/unit)", value=25.0)
+filter_cost = st.sidebar.number_input("Filter Cost ($/unit)", value=120.0)
+fitting_factor = st.sidebar.slider("Fittings %", 5, 20, 10) / 100
+
 # ========================= CALCULATIONS =========================
 def hw(Q, D, L, C=140):
     return 10.67 * L * (Q ** 1.852) / ((C ** 1.852) * (D ** 4.871))
