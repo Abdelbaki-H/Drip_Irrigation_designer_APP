@@ -105,7 +105,7 @@ pump_kw = (flow_ls * tdh * 9.81) / (eff * 1000)
 
 filters = max(1, int(flow_ls / 40))
 fert_injector = flow_ls * 0.02
-
+valves = zones
 # ========================= COST ESTIMATION (Under modification) =========================
 pe_cost = pe_total * pe_cost_per_m
 pvc_cost = pvc_total * pvc_cost_per_m
